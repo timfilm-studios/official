@@ -12,6 +12,10 @@
         <link rel="stylesheet" href="style.css">
         <meta name="description" content="Официальный сайт мап-дэв разработчиков TF Studios">
         <meta name="author" content="Koishem">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 <!--Styles-->
     <style>
         html, body{
@@ -33,6 +37,25 @@
             margin-left: 3vw;
             user-select: none;
             pointer-events: none;
+
+            opacity: 0;
+            transform: translateY(3vw);
+            animation: logoFadeIn 1s ease-in-out 0.5s forwards;
+        }
+        #slogan{
+            position: absolute;
+            z-index: 5;
+            width: 35vw;
+            user-select: none;
+            pointer-events: none;
+            margin-left: 55vw;
+            margin-top: 10vw;
+            color: white;
+            font-size: 2.5vw;
+            font-family: "Sansation", sans-serif;
+            text-align: center;
+            text-shadow: 3px 3px #8e0c98;
+            letter-spacing: 0.1vw;
 
             opacity: 0;
             transform: translateY(3vw);
@@ -109,6 +132,7 @@
     <body>
         <div id="particle_container">
             <img id="logo" src="timfilm_studios.png" draggable="false">
+            <p id="slogan">Мы - команда энтузиастов, которые разрабатывают качественные русские карты в Майнкрафт</p>
             <div class="gradient"></div>
             <div class="tint"></div>
         </div>
