@@ -33,6 +33,10 @@
             height: calc(30vw);
             background-color: #e710f7;
             overflow: hidden;
+
+            transform: scaleY(0);
+            transform-origin: top;
+            animation: revealContainer 1.2s ease-out forwards;
         }
         #logo{
             width: 45vw;
@@ -44,7 +48,7 @@
             pointer-events: none;
 
             opacity: 0;
-            transform: translateY(3vw);
+            transform: translateY(5vw);
             animation: logoFadeIn 1s ease-in-out 0.5s forwards;
         }
         #slogan{
@@ -63,7 +67,7 @@
             letter-spacing: 0.1vw;
 
             opacity: 0;
-            transform: translateY(3vw);
+            transform: translateY(5vw);
             animation: logoFadeIn 1s ease-in-out 0.5s forwards;
         }
         .particle {
@@ -119,6 +123,11 @@
                 opacity: 0;
                 width: 0vw;
                 height: 0vw;
+            }
+        }
+        @keyframes revealContainer {
+            to {
+                transform: scaleY(1);
             }
         }
         @keyframes logoFadeIn {
@@ -220,12 +229,12 @@
           const swiper = new Swiper('.swiper', {
             loop: true,
             navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
             pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+                el: '.swiper-pagination',
+                clickable: true,
             },
           });
 </script>
