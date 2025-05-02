@@ -193,6 +193,42 @@
             line-height: 1.6vw;
             color: white;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #7d0000;
+            border: 0.5vw solid #ffffff;
+            font-family: "Sansation", sans-serif;
+            color: white;
+            font-weight: bold;
+            padding: 4vw;
+            border-radius: 2vw;
+            font-size: 4vw;
+            text-align: center;
+            width: 80vw;
+            max-width: 60vw;
+        }
+        .close-btn {
+            position: absolute;
+            top: 2vw;
+            right: 2vw;
+            font-size: 3vw;
+            font-weight: bold;
+            color: #000000;
+            cursor: pointer;
+        }
         @keyframes particleAnim {
             0% {
                 opacity: 1;
@@ -242,6 +278,9 @@
             width: 100vw;
             height: 25vw;
             overflow: hidden;
+            border-top: 0.2vw solid #ffffff;
+            border-bottom: 0.2vw solid #ffffff;
+            border-radius: 0.5vw;
             opacity: 0;
             transform: translateY(1vw);
             animation: logoFadeIn 2s ease-in-out forwards;
@@ -270,12 +309,12 @@
         .swiper-pagination-bullet {
             width: 5vw;
             height: 1vw;
-            border-radius: 2px;
-            border: 3px solid #ffffff;
+            border-radius: 0.3vw;
+            border: 0.2vw solid #ffffff;
             background-color: #888;
             opacity: 0.5;
             transition: all 0.3s ease;
-            margin: 0 6px;
+            margin: 0 1vw;
         }
         .swiper-pagination-bullet-active {
             background-color: #000;
@@ -284,6 +323,13 @@
     </style>
 <!--Website  contents-->
     <body>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-btn" class="close-btn">X</span>
+                <p>Для лучшего опыта рекомендуем просматривать сайт с компьютера либо на большем экране.</p>
+            </div>
+        </div>
+
         <div id="particle_container">
             <img id="logo" src="timfilm_studios.png" draggable="false">
             <p id="slogan">Мы - команда энтузиастов, которые разрабатывают качественные карты в Майнкрафт.</p>
@@ -322,6 +368,9 @@
                     <img class="project-image" src="ftt2_preview.jpg" draggable="false">
                     <p class="project-name">Follow The Trail 2: Chapter 1</p>
                     <p class="project-date">22 января 2024</p>
+                    <div class="project-description">
+                        <p>Сюжетная хоррор карта, являющаяся продолжением <b>"Follow The Trail"</b>, в которой мы играем за бывшего детектива и нынешнего электрика, которого преследуют кошмары и аномальные явления. Познайте мир ужасов в своих снах и не только, с помощью способностей главного героя возьмите дело в свои руки, разберитесь с этими кошмарами, чтобы в конечном итоге спасти Генри.</p>
+                    </div>
                     <div class="project-tag-container">
                         <span class="project-tag"><img class="tag-icon" src="version.svg">1.19.4</span>
                         <span class="project-tag">Хоррор</span>
@@ -336,6 +385,9 @@
                     <img class="project-image" src="ftt1_preview.jpg" draggable="false">
                     <p class="project-name">Follow The Trail</p>
                     <p class="project-date">12 февраля 2023</p>
+                    <div class="project-description">
+                        <p>Атмосферная хоррор карта, где вы - любитель, который хочет стать настоящим детективом. Вы приезжаете на заброшенный строительный завод, закрытый несколько лет назад, где по слухам обитает опасный маньяк, прозванный "Демон Душ". Вы решаете найти и выследить его, а после сдать полиции, но в один момент все начинает идти не по плану... Карта содержит продуманные локации, сюжет и катсцены. Карта рассчитана на одного игрока.</p>
+                    </div>
                     <div class="project-tag-container">
                         <span class="project-tag"><img class="tag-icon" src="version.svg">1.16.2</span>
                         <span class="project-tag">Хоррор</span>
@@ -350,6 +402,9 @@
                     <img class="project-image" src="spiderman_preview.jpg" draggable="false">
                     <p class="project-name">Spiderman</p>
                     <p class="project-date">4 июля 2023</p>
+                    <div class="project-description">
+                        <p>Вы узнали про старый, таинственный бункер, где вот уже много лет пропадают люди. Решая узнать, что же там происходит, вы отправились вниз, глубоко под землю, но поняли, что попали в ловушку. Вам предстоит решать головоломки и параллельно убегать от странного Человека Паука....? Сделано в рамках конкурса "Карта за 48 часов".</p>
+                    </div>
                     <div class="project-tag-container">
                         <span class="project-tag"><img class="tag-icon" src="version.svg">1.19.4</span>
                         <span class="project-tag">Хоррор</span>
@@ -365,6 +420,27 @@
 
 <!--Scripts-->
           <script>
+            // on load
+            window.onload = function() {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth < 768) {
+                const modal = document.getElementById("modal");
+                const closeBtn = document.getElementById("close-btn");
+
+                modal.style.display = "block";
+
+                closeBtn.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                window.onclick = function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+        }
             // Particle container script
             const container = document.getElementById('particle_container');
 
