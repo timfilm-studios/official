@@ -209,13 +209,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #7d0000;
-            border: 0.5vw solid #ffffff;
-            font-family: "Sansation", sans-serif;
+            background-color: #212121;
+            border: 0.4vw solid #ffffff;
+            font-family: sans-serif;
             color: white;
-            font-weight: bold;
             padding: 4vw;
-            border-radius: 2vw;
+            border-radius: 0.3vw;
             font-size: 4vw;
             text-align: center;
             width: 80vw;
@@ -227,7 +226,7 @@
             right: 2vw;
             font-size: 3vw;
             font-weight: bold;
-            color: #000000;
+            color: white;
             cursor: pointer;
         }
         .side-menu {
@@ -241,12 +240,11 @@
             z-index: 999;
             transition: width 0.3s ease;
             overflow: hidden;
-            box-shadow: -0.2vw 0px 1vw rgba(0, 0, 0, 0.5);
+            box-shadow: -0.2vw 0px 1vw rgba(0, 0, 0, 0.2);
             transition: 0.3s ease;
             transform: translateX(100%);
             animation: slideIn 0.9s forwards; 
         }
-
         .menu-toggle {
             font-size: 2vw;
             color: white;
@@ -255,7 +253,6 @@
             cursor: pointer;
             user-select: none;
         }
-
         .menu-items {
             display: flex;
             flex-direction: column;
@@ -265,20 +262,21 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
-
         .menu-items a {
             color: #bfbfbf;
             font-size: 1.2vw;
             text-decoration: none;
             margin-bottom: 1vw;
+            padding-left: 0.3vw;
             font-family: "Sansation", sans-serif;
             text-transform: uppercase;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
-
         .menu-items a:hover{
             color: white;
+            transform: translateX(0.3vw);
+            border-left: 0.2vw solid #ffffff;
         }
-
         .side-menu:hover {
             width: 12vw;
             height: auto;
