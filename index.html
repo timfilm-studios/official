@@ -26,6 +26,7 @@
             padding: 0;
             background-color: #000000;
             height: 100vw;
+            scroll-behavior: smooth;
             overflow-y: auto;
             overflow-x: hidden;
         }
@@ -229,6 +230,64 @@
             color: #000000;
             cursor: pointer;
         }
+        .side-menu {
+            position: fixed;
+            top: 5vh;
+            right: 0;
+            width: 3vw;
+            height: 5vw;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 1vw 0 0 1vw;
+            z-index: 999;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            box-shadow: -0.2vw 0px 1vw rgba(0, 0, 0, 0.5);
+            transition: 0.3s ease;
+            transform: translateX(100%);
+            animation: slideIn 0.9s forwards; 
+        }
+
+        .menu-toggle {
+            font-size: 2vw;
+            color: white;
+            text-align: center;
+            padding: 1vw 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 1vw;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-items a {
+            color: #bfbfbf;
+            font-size: 1.2vw;
+            text-decoration: none;
+            margin-bottom: 1vw;
+            font-family: "Sansation", sans-serif;
+            text-transform: uppercase;
+        }
+
+        .menu-items a:hover{
+            color: white;
+        }
+
+        .side-menu:hover {
+            width: 12vw;
+            height: auto;
+            background-color: rgba(0, 0, 0, 1);
+        }
+        .side-menu:hover .menu-items {
+            opacity: 1;
+            pointer-events: auto;
+        }
         @keyframes particleAnim {
             0% {
                 opacity: 1;
@@ -272,6 +331,14 @@
         @keyframes tintFadeIn {
             to {
                 background: rgb(0, 0, 0, 0.3);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
             }
         }
         .swiper {
@@ -323,6 +390,17 @@
     </style>
 <!--Website  contents-->
     <body>
+        <div class="side-menu">
+            <div class="menu-toggle">☰</div>
+            <div class="menu-items">
+                <a href="#section1">Главная</a>
+                <a href="#section2">Наши Проекты</a>
+                <a href="#section3">Связь</a>
+                <a href="#section4">Команда</a>
+                <a href="#section5">История</a>
+            </div>
+        </div>
+
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span id="close-btn" class="close-btn">X</span>
@@ -330,17 +408,21 @@
             </div>
         </div>
 
-        <div id="particle_container">
-            <img id="logo" src="timfilm_studios.png" draggable="false">
-            <p id="slogan">Мы - команда энтузиастов, которые разрабатывают качественные карты в Майнкрафт.</p>
-            <div class="gradient"></div>
-            <div class="tint"></div>
+        <div id="section1">
+            <div id="particle_container">
+                <img id="logo" src="timfilm_studios.png" draggable="false">
+                <p id="slogan">Мы - команда энтузиастов, которые разрабатывают качественные карты в Майнкрафт.</p>
+                <div class="gradient"></div>
+                <div class="tint"></div>
+            </div>
         </div>
-
-        <div class="label">
-            <span>Наши Проекты</span>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        
+        <div id="section2">
+            <div class="label">
+                <span>Наши Проекты</span>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
 
         <!-- Swiper -->
@@ -418,8 +500,33 @@
             <div class="swiper-pagination"></div>
         </div>
 
+        <div id="section3">
+            <div class="label">
+                <span>Связь</span>
+            </div>
+        </div>
+
+        <div id="section4">
+            <div class="label">
+                <span>Наша Команда</span>
+            </div>
+        </div>
+
+        <div id="section5">
+            <div class="label">
+                <span>История Студии</span>
+            </div>
+        </div>
+
 <!--Scripts-->
           <script>
+            // scroll on click
+            function scrollToSection(selector) {
+                const element = document.querySelector(selector);
+                if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
             // on load
             window.onload = function() {
             const screenWidth = window.innerWidth;
