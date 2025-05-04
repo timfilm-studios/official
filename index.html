@@ -386,6 +386,137 @@
             background-color: #000;
             opacity: 1;
         }
+        .timeline {
+            top: 5vw;
+            position: relative;
+            width: 90vw;
+            height: 10vw;
+            margin-left: 5vw;
+            height: 10vw;
+            border-top: 0.3vw solid white;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            opacity: 0;
+            transform: translateY(5vw);
+            animation: logoFadeIn 1s ease-in-out 0.5s forwards;
+        }
+        .event {
+            position: absolute;
+            width: auto;
+            text-align: center;
+        }
+        .dot {
+            width: 0.8vw;
+            height: 0.8vw;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: absolute;
+            top: -0.1vw;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+        .event-description {
+            margin-top: 1vw;
+            font-size: 1.2vw;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-color: black;
+            padding: 0.3vw;
+            border: 0.1vw solid white;
+            border-radius: 0.3vw;
+        }
+        .level1 .event-description {
+            margin-top: 1vw;
+            left: -2vw;
+        }
+        .level2 .event-description {
+            margin-top: 4vw;
+            left: 2vw;
+        }
+        .level3 .event-description {
+            margin-top: 8vw;
+            left: 2vw;
+        }
+        .level1 .event-description:before {
+            content: '';
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            width: 2px;
+            height: 1vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .level2 .event-description:before {
+            content: '';
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            width: 2px;
+            height: 4vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .level3 .event-description:before {
+            content: '';
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            width: 2px;
+            height: 8vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .event.level1 {
+            z-index: 3;
+        }
+        .event.level2 {
+            z-index: 2;
+        }
+        .event.level3 {
+            z-index: 1;
+        }
+        .year-mark {
+            position: absolute;
+            top: -2vw;
+            font-size: 1.2vw;
+            color: white;
+            font-family: "Sansation", sans-serif;
+            text-transform: uppercase;
+        }
+        .year-mark-1 { left: -1.5%; }
+        .year-mark-2 { left: 32%; }
+        .year-mark-3 { left: 66%; }
+        .year-mark-4 { left: 98.5%; }
+
+        .event:nth-child(1) { left: -3.1%; }
+        .event:nth-child(2) { left: 0%; }
+        .event:nth-child(3) { left: 50%; }
+        .event:nth-child(4) { left: 70%; }
+        .event:nth-child(5) { left: 90%; }
+
+        .teammate{
+            color: #ff7070;
+            letter-spacing: 0.1vw;
+        }
+        .andrey_go{
+            color: #ffb070;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .added-member{
+            color: #11ff00;
+            font-family: 'Arial Black', sans-serif;
+            line-height: 0vw;
+        }
+        .kicked-member{
+            color: #ff0000;
+            font-family: 'Arial Black', sans-serif;
+            line-height: 0vw;
+        }
+
     </style>
 <!--Website  contents-->
     <body>
@@ -515,6 +646,34 @@
             <div class="label">
                 <span>История Студии</span>
             </div>
+        </div>
+
+        <div class="timeline">
+            <div class="event level1">
+                <div class="dot" style="background-color: #ff7070"></div>
+                <div class="event-description" style="border-color: #ff7070"><span class="teammate">Teame1t</span> основал TF Studios</div>
+            </div>
+            <div class="event level2">
+                <div class="dot" style="background-color: #ffb070"></div>
+                <div class="event-description" style="border-color: #ffb070"><span class="added-member">+</span> <span class="andrey_go">Andruy_GO</span> присоединился</div>
+            </div>
+            <div class="event level3">
+                <div class="dot"></div>
+                <div class="event-description">Событие 3</div>
+            </div>
+            <div class="event level2">
+                <div class="dot"></div>
+                <div class="event-description">Событие 4</div>
+            </div>
+            <div class="event level1">
+                <div class="dot"></div>
+                <div class="event-description">Событие 5</div>
+            </div>
+
+            <div class="year-mark year-mark-1">2022</div>
+            <div class="year-mark year-mark-2">2023</div>
+            <div class="year-mark year-mark-3">2024</div>
+            <div class="year-mark year-mark-4">2025</div>
         </div>
 
 <!--Scripts-->
