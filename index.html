@@ -419,12 +419,12 @@
         }
         .event-description {
             margin-top: 1vw;
-            font-size: 1.2vw;
+            font-size: 1.1vw;
             font-family: 'Arial', sans-serif;
             color: white;
             background-color: black;
             padding: 0.3vw;
-            border: 0.1vw solid white;
+            border: 0.2vw solid white;
             border-radius: 0.3vw;
         }
         .level1 .event-description {
@@ -436,7 +436,23 @@
             left: 2vw;
         }
         .level3 .event-description {
-            margin-top: 8vw;
+            margin-top: 7vw;
+            left: 2vw;
+        }
+        .level4 .event-description {
+            margin-top: 10vw;
+            left: 2vw;
+        }
+        .kicklist .event-description {
+            margin-top: 13vw;
+            left: 2vw;
+        }
+        .level5 .event-description {
+            margin-top: -5vw;
+            left: 2vw;
+        }
+        .level6 .event-description {
+            margin-top: -8vw;
             left: 2vw;
         }
         .level1 .event-description:before {
@@ -465,18 +481,67 @@
             top: 0vw;
             left: 50%;
             width: 2px;
-            height: 8vw;
+            height: 7vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .level4 .event-description:before {
+            content: '';
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            width: 2px;
+            height: 10vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .level5 .event-description:before {
+            content: '';
+            position: absolute;
+            top: -3vw;
+            left: 50%;
+            width: 2px;
+            height: 3vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .level6 .event-description:before {
+            content: '';
+            position: absolute;
+            top: -6vw;
+            left: 50%;
+            width: 2px;
+            height: 6vw;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        .kicklist .event-description:before {
+            content: '';
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            width: 2px;
+            height: 13vw;
             background-color: white;
             transform: translateX(-50%);
         }
         .event.level1 {
-            z-index: 3;
+            z-index: 4;
         }
         .event.level2 {
-            z-index: 2;
+            z-index: 3;
         }
         .event.level3 {
+            z-index: 2;
+        }
+        .event.level4 {
             z-index: 1;
+        }
+        .event.level5 {
+            z-index: 2;
+        }
+        .event.level6 {
+            z-index: 1
         }
         .year-mark {
             position: absolute;
@@ -487,15 +552,53 @@
             text-transform: uppercase;
         }
         .year-mark-1 { left: -1.5%; }
-        .year-mark-2 { left: 32%; }
-        .year-mark-3 { left: 66%; }
-        .year-mark-4 { left: 98.5%; }
+        .year-mark-2 { left: 10%; }
+        .year-mark-3 { left: 35%; }
+        .year-mark-4 { left: 65%; }
+        .year-mark-5 { left: 98%; }
 
+        /*Teame1t*/
         .event:nth-child(1) { left: -3.1%; }
-        .event:nth-child(2) { left: 0%; }
-        .event:nth-child(3) { left: 50%; }
-        .event:nth-child(4) { left: 70%; }
-        .event:nth-child(5) { left: 90%; }
+        /*AndreyGO*/
+        .event:nth-child(2) { left: 5%; }
+        .event:nth-child(3) { left: 7%; }
+        .event:nth-child(4) { left: 18%; }
+        .event:nth-child(5) { left: 31%; }
+        /*Nordos*/
+        .event:nth-child(6) { left: 23%; }
+        /*Zvyax*/
+        .event:nth-child(7) { left: 27.5%; }
+        /*ribeha*/
+        .event:nth-child(8) { left: 37.5%; }
+        .event:nth-child(9) { left: 39%; }
+        /*privet*/
+        .event:nth-child(10) { left: 43%; }
+        /*Spamcat*/
+        .event:nth-child(11) { left: 40.5%; }
+        /*What is it*/
+        .event:nth-child(12) { left: 50%; }
+        /*Nate*/
+        .event:nth-child(13) { left: 31.5%; }
+        /*limelumi*/
+        .event:nth-child(14) { left: 28%; }
+        /*TMA*/
+        .event:nth-child(15) { left: 61%; }
+        /*koishem*/
+        .event:nth-child(16) { left: 55.5%; }
+        /*andeku*/
+        .event:nth-child(17) { left: 65%; }
+        /*-nordos*/
+        .event:nth-child(18) { left: 61%; }
+        /*vilka*/
+        .event:nth-child(19) { left: 22.5%; }
+        /*-spamcat*/
+        .event:nth-child(20) { left: 46%; }
+        /*-vilka*/
+        .event:nth-child(21) { left: 68.5%; }
+        /*website*/
+        .event:nth-child(22) { left: 70%; }
+        /*-andruygo*/
+        .event:nth-child(23) { left: 35.5%; }
 
         .teammate{
             color: #ff7070;
@@ -503,6 +606,61 @@
         }
         .andrey_go{
             color: #ffb070;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .vilka{
+            color: #ea8b2c;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .nordos{
+            color: #cbcbcb;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .riba{
+            color: #54d1ff;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .npu8et{
+            color: #f53fff;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .zvyax{
+            color: #a264ff;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .pomatsu{
+            color: #ff8864;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .spamcat{
+            color: #4fc360;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .nate{
+            color: #ffaa56;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .lime{
+            color: #56ff56;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .koishem{
+            color: #ededed;
+            letter-spacing: 0.1vw;
+            line-height: 0.5vw;
+        }
+        .andeku{
+            color: #ffd53c;
             letter-spacing: 0.1vw;
             line-height: 0.5vw;
         }
@@ -518,7 +676,6 @@
         }
         .map-release{
             color: #ffdd00;
-            font-family: 'Arial Black', sans-serif;
             line-height: 0vw;
         }
 
@@ -600,7 +757,7 @@
             <div class="swiper-slide">
                 <div class="project-container">
                     <img class="project-image" src="spiderman_preview.jpg" draggable="false">
-                    <p class="project-name">Spiderman</p>
+                    <p class="project-name">SpiderMan</p>
                     <p class="project-date">4 июля 2023</p>
                     <div class="project-description">
                         <p>Вы узнали про старый, таинственный бункер, где вот уже много лет пропадают люди. Решая узнать, что же там происходит, вы отправились вниз, глубоко под землю, но поняли, что попали в ловушку. Вам предстоит решать головоломки и параллельно убегать от странного Человека Паука....? Сделано в рамках конкурса "Карта за 48 часов".</p>
@@ -660,25 +817,98 @@
             </div>
             <div class="event level2">
                 <div class="dot" style="background-color: #ffb070"></div>
-                <div class="event-description" style="border-color: #ffb070"><span class="added-member">+</span> <span class="andrey_go">Andruy_GO</span> присоединился</div>
+                <div class="event-description" style="border-color: #ffb070"><span class="added-member">+</span> <span class="andrey_go">Andruy_GO</span> </div>
             </div>
-            <div class="event level3">
-                <div class="dot"></div>
-                <div class="event-description">Событие 3</div>
+            <div class="event level5">
+                <div class="dot" style="background-color: #ffdd00"></div>
+                <div class="event-description" style="border-color: #ffdd00"><span class="added-member">+</span> Релиз <span class="map-release">Follow The Trail</span></div>
             </div>
-            <div class="event level2">
-                <div class="dot"></div>
-                <div class="event-description">Событие 4</div>
+            <div class="event level6">
+                <div class="dot" style="background-color: #ffdd00"></div>
+                <div class="event-description" style="border-color: #ffdd00"><span class="added-member">+</span> Релиз <span class="map-release">SpiderMan</span></div>
+            </div>
+            <div class="event level5">
+                <div class="dot" style="background-color: #ffdd00"></div>
+                <div class="event-description" style="border-color: #ffdd00"><span class="added-member">+</span> Релиз <span class="map-release">Follow The Trail 2</span></div>
             </div>
             <div class="event level1">
-                <div class="dot"></div>
-                <div class="event-description">Событие 5</div>
+                <div class="dot" style="background-color: #cbcbcb"></div>
+                <div class="event-description" style="border-color: #cbcbcb"><span class="added-member">+</span> <span class="nordos">Nordos</span> </div>
+            </div>
+            <div class="event level2">
+                <div class="dot" style="background-color: #a264ff"></div>
+                <div class="event-description" style="border-color: #a264ff"><span class="added-member">+</span> <span class="zvyax">Zvyax</span> </div>
+            </div>
+            <div class="event level3">
+                <div class="dot" style="background-color: #54d1ff"></div>
+                <div class="event-description" style="border-color: #54d1ff"><span class="added-member">+</span> <span class="riba">RblBEHA</span> </div>
+            </div>
+            <div class="event level2">
+                <div class="dot" style="background-color: #ff8864"></div>
+                <div class="event-description" style="border-color: #ff8864"><span class="added-member">+</span> <span class="pomatsu">Pomatsu</span> </div>
+            </div>
+            <div class="event level1">
+                <div class="dot" style="background-color: #f53fff"></div>
+                <div class="event-description" style="border-color: #f53fff"><span class="added-member">+</span> <span class="npu8et">nPu8eT</span> </div>
+            </div>
+            <div class="event level4">
+                <div class="dot" style="background-color: #4fc360"></div>
+                <div class="event-description" style="border-color: #4fc360"><span class="added-member">+</span> <span class="spamcat">SpamCat</span> </div>
+            </div>
+            <div class="event level6">
+                <div class="dot" style="background-color: #ffdd00"></div>
+                <div class="event-description" style="border-color: #ffdd00"><span class="added-member">+</span> Релиз <span class="map-release">What Is It DEMO</span></div>
+            </div>
+            <div class="event level1">
+                <div class="dot" style="background-color: #ffaa56"></div>
+                <div class="event-description" style="border-color: #ffaa56"><span class="added-member">+</span> <span class="nate">NateShapiro</span> </div>
+            </div>
+            <div class="event level3">
+                <div class="dot" style="background-color: #56ff56"></div>
+                <div class="event-description" style="border-color: #56ff56"><span class="added-member">+</span> <span class="lime">lime.lumi</span> </div>
+            </div>
+            <div class="event level5">
+                <div class="dot" style="background-color: #ffdd00"></div>
+                <div class="event-description" style="border-color: #ffdd00"><span class="added-member">+</span> <span class="map-release">The Map Awards</span> </div>
+            </div>
+            <div class="event level1">
+                <div class="dot" style="background-color: #ededed"></div>
+                <div class="event-description" style="border-color: #ededed"><span class="added-member">+</span> <span class="koishem">Koishem</span> </div>
+            </div>
+            <div class="event level1">
+                <div class="dot" style="background-color: #ffd53c"></div>
+                <div class="event-description" style="border-color: #ffd53c"><span class="added-member">+</span> <span class="andeku">Andeku</span> </div>
+            </div>
+            <div class="event kicklist">
+                <div class="dot" style="background-color: #ff0000"></div>
+                <div class="event-description" style="border-color: #ff0000"><span class="kicked-member">-</span> <span class="nordos">Nordos</span> </div>
+            </div>
+            <div class="event level4">
+                <div class="dot" style="background-color: #ea8b2c"></div>
+                <div class="event-description" style="border-color: #ea8b2c"><span class="added-member">+</span> <span class="vilka">MisteryVillager</span> </div>
+            </div>
+            <div class="event kicklist">
+                <div class="dot" style="background-color: #ff0000"></div>
+                <div class="event-description" style="border-color: #ff0000"><span class="kicked-member">-</span> <span class="spamcat">Spamcat</span> </div>
+            </div>
+            <div class="event kicklist">
+                <div class="dot" style="background-color: #ff0000"></div>
+                <div class="event-description" style="border-color: #ff0000"><span class="kicked-member">-</span> <span class="vilka">MisteryVillager</span> </div>
+            </div>
+            <div class="event level6">
+                <div class="dot" style="background-color: #ffdd00"></div>
+                <div class="event-description" style="border-color: #ffdd00"><span class="added-member">+</span> Релиз <span class="map-release">Сайт TF Studios</span></div>
+            </div>
+            <div class="event kicklist">
+                <div class="dot" style="background-color: #ff0000"></div>
+                <div class="event-description" style="border-color: #ff0000"><span class="kicked-member">-</span> <span class="andrey_go">Andruy_GO</span> </div>
             </div>
 
             <div class="year-mark year-mark-1">2022</div>
             <div class="year-mark year-mark-2">2023</div>
             <div class="year-mark year-mark-3">2024</div>
-            <div class="year-mark year-mark-4">2025</div>
+            <div class="year-mark year-mark-4">20 25</div>
+            <div class="year-mark year-mark-5">2026</div>
         </div>
 
 <!--Scripts-->
