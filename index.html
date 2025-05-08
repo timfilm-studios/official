@@ -195,6 +195,33 @@
             line-height: 1.6vw;
             color: white;
         }
+        .download-grid {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            gap: 10px;
+            right: 1vw;
+            top: 19vw;
+        }
+
+        .download-icon {
+            flex: 1;
+            text-align: center;
+            padding: 0vw;
+            border-radius: 1vw;
+            cursor: pointer;
+        }
+
+        .download-icon:hover img {
+            transform: scale(1.2);
+        }
+
+        .download-icon img {
+            width: 5vw;
+            height: 5vw;
+            transition: transform 0.3s ease;
+        }
         .modal {
             display: none;
             position: fixed;
@@ -563,7 +590,7 @@
         .event:nth-child(2) { left: 5%; }
         .event:nth-child(3) { left: 7%; }
         .event:nth-child(4) { left: 18%; }
-        .event:nth-child(5) { left: 31%; }
+        .event:nth-child(5) { left: 30.5%; }
         /*Nordos*/
         .event:nth-child(6) { left: 23%; }
         /*Zvyax*/
@@ -735,6 +762,14 @@
                         <span class="project-tag">Приключение</span>
                         <span class="project-tag">На одного игрока</span>
                     </div>
+                    <div class="download-grid">
+                        <a href="https://minecraft-inside.ru/maps/179453-what-is-it.html" class="download-icon" title="Minecraft Inside" target="_blank" rel="noopener noreferrer">
+                          <img src="inside.png" alt="Minecraft Inside">
+                        </a>
+                        <a href="https://www.planetminecraft.com/project/what-is-it-demo/" class="download-icon" title="Planet Minecraft" target="_blank" rel="noopener noreferrer">
+                            <img src="planet.png" alt="Planet Minecraft">
+                          </a>
+                      </div>
                 </div>
             </div>
             <div class="swiper-slide">
