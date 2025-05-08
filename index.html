@@ -656,6 +656,7 @@
             color: #54d1ff;
             letter-spacing: 0.1vw;
             line-height: 0.5vw;
+            cursor: pointer;
         }
         .npu8et{
             color: #f53fff;
@@ -715,6 +716,7 @@
     </style>
 <!--Website  contents-->
     <body>
+        <audio id="sound" src="assets/secret.mp3" preload="auto"></audio>
         <div class="side-menu">
             <div class="menu-toggle">☰</div>
             <div class="menu-items">
@@ -927,7 +929,7 @@
             </div>
             <div class="event level2">
                 <div class="dot" style="background-color: #54d1ff"></div>
-                <div class="event-description" style="border-color: #54d1ff"><span class="added-member">+</span> <span class="riba">RblBEHA</span> </div>
+                <div class="event-description" style="border-color: #54d1ff"><span class="added-member">+</span> <span id="playButton" class="riba">RblBEHA</span> </div>
             </div>
             <div class="event level3">
                 <div class="dot" style="background-color: #ff8864"></div>
@@ -1011,6 +1013,13 @@
 
 <!--Scripts-->
           <script>
+            //audio
+            const playButton = document.getElementById('playButton');
+            const sound = document.getElementById('sound');
+
+            playButton.addEventListener('click', function() {
+                sound.play();
+            });
             // scroll on click
             function scrollToSection(selector) {
                 const element = document.querySelector(selector);
