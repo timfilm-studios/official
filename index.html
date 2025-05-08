@@ -713,7 +713,63 @@
             color: #ffdd00;
             line-height: 0vw;
         }
+        .contacts-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2vw;
+            width: 100vw;
+            gap: 1.5vh;
+        }
 
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1vw 2vw;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-family: 'Arial Black', sans-serif;
+            border-radius: 2.5vw;
+            border: 0.2vw solid #ffffff;
+            transition: background-color 0.3s;
+            width: 25vw;
+            position: relative;
+        }
+
+        .contact-button:hover {
+            background-color: #2c2c2c;
+        }
+
+        .contact-icon {
+            width: 2vw;
+            height: 2vw;
+            margin-right: 1vw;
+        }
+
+        .contact-button span {
+            display: inline-block;
+            text-align: center;
+        }
+        .contact-text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.5vw;
+            letter-spacing: 0.1vw;
+            color: white;
+            margin-top: 2vh;
+            margin-bottom: 10vh;
+            text-align: center;
+            width: 100%;
+        }
+        .contact-button::after {
+            content: '>';
+            color: white;
+            position: absolute;
+            right: 1.5vw;
+            font-size: 1.5vw;
+        }
     </style>
 <!--Website  contents-->
     <body>
@@ -1006,6 +1062,30 @@
                 <span>Контакты</span>
             </div>
         </div>
+
+        <div id="contacts" class="contacts-container">
+            <a href="https://boosty.to/timfilm_studios" target="_blank" rel="noopener noreferrer" class="contact-button">
+              <img src="https://images.live.vkvideo.ru/image/3cbec780-69fc-4323-984a-d4c7d3bf1541?change_time=1717385126&mw=640" alt="Boosty" class="contact-icon">Boosty
+            </a>
+            <a href="https://www.youtube.com/@timfilmstudios" target="_blank" rel="noopener noreferrer" class="contact-button">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" alt="Youtube" class="contact-icon" style="transform: scaleX(1.4);">YouTube
+            </a>
+            <a href="https://minecraft-inside.ru/user/Teame1T/" target="_blank" rel="noopener noreferrer" class="contact-button">
+                <img src="assets/inside.png" alt="Minecraft Inside" class="contact-icon" style="transform: scale(1.7);">Minecraft Inside
+              </a>
+              <a href="https://www.planetminecraft.com/member/timfilm_studios/" target="_blank" rel="noopener noreferrer" class="contact-button">
+                <img src="https://static.wikia.nocookie.net/planetminecraft/images/c/c2/CommunityIcon_frgrhz7cdz361.png/revision/latest/thumbnail/width/360/height/360?cb=20231007144900" alt="Planet Minecraft" class="contact-icon">Planet Minecraft
+              </a>
+            <a href="https://t.me/timfilm_studios" target="_blank" target="_blank" rel="noopener noreferrer" class="contact-button">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png" alt="Telegram" class="contact-icon">Telegram
+            </a>
+            <a href="https://vk.com/teame1t" target="_blank" target="_blank" rel="noopener noreferrer" class="contact-button">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/2048px-VK_Compact_Logo_%282021-present%29.svg.png" alt="VK" class="contact-icon">VK
+            </a>
+            <div class="contact-text">
+                По вопросам сотрудничества: <span style="color:#ff3bf8">timfilmstudios@gmail.com</span>
+            </div>
+          </div>
 
         <div id="section4">
             <div class="label">
