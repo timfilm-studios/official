@@ -25,7 +25,7 @@
             margin: 0;
             padding: 0;
             background-color: #000000;
-            height: 100vw;
+            height: 100vh;
             scroll-behavior: smooth;
             overflow-y: auto;
             overflow-x: hidden;
@@ -217,6 +217,18 @@
             width: 3vw;
             height: 3vw;
             transition: transform 0.3s ease;
+        }
+        .coming-soon {
+            width: 86vw;
+            height: 25vw;
+            margin-left: 6vw;
+            overflow: hidden;
+            border-top: 0.2vw solid #ffffff;
+            border-bottom: 0.2vw solid #ffffff;
+            border-radius: 1vw;
+            opacity: 0;
+            transform: translateY(1vw);
+            animation: logoFadeIn 2s ease-in-out forwards;
         }
         .modal {
             display: none;
@@ -413,9 +425,8 @@
             top: 5vw;
             position: relative;
             width: 86vw;
-            height: 10vw;
             margin-left: 7vw;
-            height: 10vw;
+            height: 17vw;
             border-top: 0.3vw solid white;
             margin-top: 5vw;
             margin-bottom: 5vw;
@@ -709,10 +720,11 @@
             <div class="menu-toggle">☰</div>
             <div class="menu-items">
                 <a href="#section1">Главная</a>
+                <a href="#section6">Скоро...</a>
                 <a href="#section2">Наши Проекты</a>
+                <a href="#section5">История</a>
                 <a href="#section3">Связь</a>
                 <a href="#section4">Команда</a>
-                <a href="#section5">История</a>
             </div>
         </div>
 
@@ -731,7 +743,32 @@
                 <div class="tint"></div>
             </div>
         </div>
-        
+
+        <div id="section6">
+            <div class="label">
+                <span>Скоро...</span>
+            </div>
+        </div>
+
+        <div class="coming-soon">
+            <div class="project-container">
+                <img class="project-image" src="assets/secret.png" draggable="false">
+                <p class="project-name">Blind Spot</p>
+                    <p class="project-date">???</p>
+                    <div class="project-description">
+                        <p><b>???</b></p>
+                    </div>
+                    <div class="project-tag-container">
+                        <span class="project-tag"><img class="tag-icon" src="assets/version.svg">1.21.4</span>
+                        <span class="project-tag">Хоррор</span>
+                        <span class="project-tag">Головоломки</span>
+                        <span class="project-tag">Психологический</span>
+                        <span class="project-tag">На одного игрока</span>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Swiper -->
         <div id="section2">
             <div class="label">
                 <span>Наши Проекты</span>
@@ -739,8 +776,6 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
-
-        <!-- Swiper -->
         <div class="swiper">
             <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -786,6 +821,17 @@
                         <span class="project-tag">Приключение</span>
                         <span class="project-tag">Одиночная / Кооператив</span>
                     </div>
+                    <div class="download-grid">
+                        <a href="https://minecraft-inside.ru/maps/173059-follow-the-trail-2-chapter-1.html" class="download-icon" title="Minecraft Inside link" target="_blank" rel="noopener noreferrer">
+                          <img src="assets/inside.png" alt="Minecraft Inside">
+                        </a>
+                        <a href="https://www.planetminecraft.com/project/follow-the-trail-2-horror-map/" class="download-icon" title="Planet Minecraft link" target="_blank" rel="noopener noreferrer">
+                            <img style="margin-left: 0.4vw" src="assets/planet.png" alt="Planet Minecraft">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1WGyWjgRmvV3ZgXJp_TUU_7msz0fWJqiu/view" class="download-icon" title="Google Drive link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/google_drive.png" alt="Google Drive">
+                        </a>
+                      </div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -802,6 +848,14 @@
                         <span class="project-tag">Головоломки</span>
                         <span class="project-tag">На одного игрока</span>
                     </div>
+                    <div class="download-grid">
+                        <a href="https://minecraft-inside.ru/maps/167641-spiderman.html" class="download-icon" title="Minecraft Inside link" target="_blank" rel="noopener noreferrer">
+                          <img src="assets/inside.png" alt="Minecraft Inside">
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1PqO1A5xfP1EqUESCxlkEVTZPF2JcgHb-" class="download-icon" title="Google Drive link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/google_drive.png" alt="Google Drive">
+                        </a>
+                      </div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -819,23 +873,22 @@
                         <span class="project-tag">Приключение</span>
                         <span class="project-tag">На одного игрока</span>
                     </div>
+                    <div class="download-grid">
+                        <a href="https://minecraft-inside.ru/maps/164082-follow-the-trail.html" class="download-icon" title="Minecraft Inside link" target="_blank" rel="noopener noreferrer">
+                          <img src="assets/inside.png" alt="Minecraft Inside">
+                        </a>
+                        <a href="https://www.planetminecraft.com/project/follow-the-trail/" class="download-icon" title="Planet Minecraft link" target="_blank" rel="noopener noreferrer">
+                            <img style="margin-left: 0.4vw" src="assets/planet.png" alt="Planet Minecraft">
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1IC2Lzo0giTnGGYM_e7JOW2xHp610rGm3" class="download-icon" title="Google Drive link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/google_drive.png" alt="Google Drive">
+                        </a>
+                      </div>
                 </div>
             </div>
             </div>
 
             <div class="swiper-pagination"></div>
-        </div>
-
-        <div id="section3">
-            <div class="label">
-                <span>Связь</span>
-            </div>
-        </div>
-
-        <div id="section4">
-            <div class="label">
-                <span>Наша Команда</span>
-            </div>
         </div>
 
         <div id="section5">
@@ -943,6 +996,18 @@
             <div class="year-mark year-mark-3">2024</div>
             <div class="year-mark year-mark-4">20 25</div>
             <div class="year-mark year-mark-5">2026</div>
+        </div>
+
+        <div id="section3">
+            <div class="label">
+                <span>Связь</span>
+            </div>
+        </div>
+
+        <div id="section4">
+            <div class="label">
+                <span>Наша Команда</span>
+            </div>
         </div>
 
 <!--Scripts-->
