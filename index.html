@@ -716,7 +716,8 @@
     </style>
 <!--Website  contents-->
     <body>
-        <audio id="sound" src="assets/secret.mp3" preload="auto"></audio>
+        <audio id="sound1" src="assets/secret.mp3" preload="auto"></audio>
+        <audio id="sound2" src="assets/secret1.mp3" preload="auto"></audio>
         <div class="side-menu">
             <div class="menu-toggle">☰</div>
             <div class="menu-items">
@@ -901,7 +902,7 @@
         <div class="timeline">
             <div class="event level1">
                 <div class="dot" style="background-color: #ff7070"></div>
-                <div class="event-description" style="border-color: #ff7070"><span class="teammate">Teame1t</span> основал TF Studios</div>
+                <div class="event-description" style="border-color: #ff7070"><span id="audio2" class="teammate">Teame1t</span> основал TF Studios</div>
             </div>
             <div class="event level2">
                 <div class="dot" style="background-color: #ffb070"></div>
@@ -929,7 +930,7 @@
             </div>
             <div class="event level2">
                 <div class="dot" style="background-color: #54d1ff"></div>
-                <div class="event-description" style="border-color: #54d1ff"><span class="added-member">+</span> <span id="playButton" class="riba">RblBEHA</span> </div>
+                <div class="event-description" style="border-color: #54d1ff"><span class="added-member">+</span> <span id="audio1" class="riba">RblBEHA</span> </div>
             </div>
             <div class="event level3">
                 <div class="dot" style="background-color: #ff8864"></div>
@@ -1014,11 +1015,15 @@
 <!--Scripts-->
           <script>
             //audio
-            const playButton = document.getElementById('playButton');
-            const sound = document.getElementById('sound');
+            const sound1 = document.getElementById('sound1');
+            const sound2 = document.getElementById('sound2');
 
-            playButton.addEventListener('click', function() {
-                sound.play();
+            document.getElementById('audio1').addEventListener('click', () => {
+                sound1.play();
+            });
+
+            document.getElementById('audio2').addEventListener('click', () => {
+                sound2.play();
             });
             // scroll on click
             function scrollToSection(selector) {
